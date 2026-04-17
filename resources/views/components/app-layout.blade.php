@@ -30,8 +30,8 @@
                                 <!-- Current: "bg-gray-900 dark:bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
                                 <a href="{{ route('home') }}" aria-current="page"
                                     class="rounded-md bg-orange-500 px-3 py-2 text-sm font-medium text-white dark:bg-gray-950/50">หน้าหลัก</a>
-                                <a href="#"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">สถิติการลาย้อนหลัง</a>
+                                <a href="{{ route('holiday') }}"
+                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">สถิติการลา</a>
                                 <a href="{{ route('driver-license') }}"
                                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">ใบขับขี่</a>
                             </div>
@@ -91,8 +91,8 @@
                 <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                     <a href="{{ route('home') }}" aria-current="page"
                         class="block rounded-md bg-orange-500 px-3 py-2 text-base font-medium text-white dark:bg-gray-950/50">หน้าหลัก</a>
-                    <a href="#"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">สถิติการลาย้อนหลัง</a>
+                    <a href="{{ route('holiday') }}"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">สถิติการลา</a>
                     <a href="{{ route('driver-license') }}"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">ใบขับขี่</a>
                 </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\CheckEmployee;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeDriverlicenseController;
+use App\Http\Controllers\EmployeeHolidayController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [CheckEmployee::class, 'index'])->name('login');
@@ -14,5 +15,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('home', [EmployeeController::class, 'index'])->name('home');
     Route::get('profile', [EmployeeController::class, 'show'])->name('profile');
     Route::get('employee/photo', [EmployeeController::class, 'showPhoto'])->name('emp.photo');
+    Route::get('holiday',[EmployeeHolidayController::class, 'index'])->name('holiday');
     Route::get('driverlc' , [EmployeeDriverlicenseController::class , 'index'])->name('driver-license');
 });
