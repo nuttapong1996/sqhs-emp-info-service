@@ -32,7 +32,7 @@
                                     class="rounded-md bg-orange-500 px-3 py-2 text-sm font-medium text-white dark:bg-gray-950/50">หน้าหลัก</a>
                                 <a href="#"
                                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">สถิติการลาย้อนหลัง</a>
-                                <a href="#"
+                                <a href="{{ route('driver-license') }}"
                                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">ใบขับขี่</a>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                         class="block rounded-md bg-orange-500 px-3 py-2 text-base font-medium text-white dark:bg-gray-950/50">หน้าหลัก</a>
                     <a href="#"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">สถิติการลาย้อนหลัง</a>
-                    <a href="#"
+                    <a href="{{ route('driver-license') }}"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">ใบขับขี่</a>
                 </div>
                 <div class="border-t border-white/10 pt-4 pb-3">
@@ -136,7 +136,10 @@
         </header>
         <main>
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                {{ $slot }}
+                    <div class="flex flex-col lg:flex-row items-center justify-center">
+                        {{ $slot }}
+                    </div>
+                </div>
             </div>
         </main>
     </div>
