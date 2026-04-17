@@ -14,6 +14,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('home', [EmployeeController::class, 'index'])->name('home');
     Route::get('profile', [EmployeeController::class, 'show'])->name('profile');
     Route::get('employee/photo', [EmployeeController::class, 'showPhoto'])->name('emp.photo');
-
     Route::get('driverlc' , [EmployeeDriverlicenseController::class , 'index'])->name('driver-license');
 });

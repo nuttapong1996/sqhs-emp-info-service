@@ -58,8 +58,6 @@ class EmployeeDriverlicenseController extends Controller
                 }
             }
         }
-        
-        // dd($activeLicenses);
         return view('driver-license' , compact('activeLicenses'));
     }
 }
