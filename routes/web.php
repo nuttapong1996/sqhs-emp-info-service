@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CheckEmployee;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeDriverlicenseController;
 use App\Http\Controllers\EmployeeHolidayController;
@@ -12,9 +13,9 @@ Route::post('login', [CheckEmployee::class, 'login'])->name('check-emp');
 Route::get('logout', [CheckEmployee::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('home', [EmployeeController::class, 'index'])->name('home');
+    Route::get('home', [DashboardController::class, 'index'])->name('home');
     Route::get('profile', [EmployeeController::class, 'show'])->name('profile');
     Route::get('employee/photo', [EmployeeController::class, 'showPhoto'])->name('emp.photo');
-    Route::get('holiday',[EmployeeHolidayController::class, 'index'])->name('holiday');
+    Route::get('holiday',[EmployeeHolidayController::class, 'show'])->name('holiday');
     Route::get('driverlc' , [EmployeeDriverlicenseController::class , 'index'])->name('driver-license');
 });

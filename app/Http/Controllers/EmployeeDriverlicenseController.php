@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\EmployeeDriverlicense;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class EmployeeDriverlicenseController extends Controller
 {
@@ -15,7 +15,6 @@ class EmployeeDriverlicenseController extends Controller
     {
         $emp = Auth::user();
         $license = EmployeeDriverlicense::where('code_emp_driverlicense', $emp['code_emp'])->get();
-
 
         $licenseMap = [
             'wheel_10_driverlicense'       => 1,
@@ -44,9 +43,10 @@ class EmployeeDriverlicenseController extends Controller
             'other_driverlicense'          => 24
         ];
 
-        foreach ($license as $lc) {
-            $activeLicenses = [];
 
+        $activeLicenses = [];
+        
+        foreach ($license as $lc) {
             foreach ($licenseMap as $field => $idx) {
                 if ($lc[$field] === 'T') {
                     $activeLicenses[] = [
@@ -58,6 +58,6 @@ class EmployeeDriverlicenseController extends Controller
                 }
             }
         }
-        return view('driver-license' , compact('activeLicenses'));
+        return view('driver-license', compact('activeLicenses'));
     }
 }
