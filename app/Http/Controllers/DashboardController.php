@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\EmployeeHoliday;
+use App\Models\HolidayDuedate;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +19,7 @@ class DashboardController extends Controller
         $curYear = $date->format('Y');
         $prevYear = $curYear - 1;
         $emp = Auth::user();
+        $duedate = HolidayDuedate::first();
         $sumleave = EmployeeHoliday::where('code_emp_offlist', $emp['code_emp'])->selectRaw(
             "SUM(CASE WHEN type_off_offlist LIKE '1%' AND yearoff_offlist='$curYear'THEN  countday_offlist ELSE 0 END) AS cur_business,
                     SUM(CASE WHEN type_off_offlist LIKE '2%'  AND yearoff_offlist='$curYear' THEN countday_offlist ELSE 0 END) AS cur_sick,
@@ -46,7 +48,7 @@ class DashboardController extends Controller
                     - SUM(CASE WHEN type_off_offlist LIKE '3%' AND yearoff_offlist = '$prevYear' THEN countday_offlist ELSE 0 END))
                     - SUM(CASE WHEN type_off_offlist LIKE '3%' AND yearoff_offlist = '$curYear' AND year_leave_offlist='$prevYear'  THEN countday_offlist ELSE 0 END) AS prev_vecation_remain"
         )->first();
-        return view('home', compact('sumleave'));
+        return view('home', compact('sumleave' ,'duedate'));
     }
 
     /**
