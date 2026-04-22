@@ -15,7 +15,7 @@ class EmployeeHolidayController extends Controller
      */
     public function index(Request $request)
     {
-       
+       return view('holiday');
     }
     /**
      * Display the specified resource.

@@ -21,16 +21,21 @@ class CheckEmployee extends Controller
         $request->validate(
             [
                 'empcode' => 'required|string',
+                'empbday' => 'required|date',
             ],
             [
                 'empcode.required' => 'กรุณากรอกรหัสพนักงาน',
+                'empbday.required' => 'กรุณากรอกวันเดือนปีเกิด',
             ]
         );
 
 
-        $empCode = $request->empcode;
+        // dd($request);
 
-        $employee = Employee::where('code_emp', $empCode)->first();
+        $empCode = $request->empcode;
+        $birthDay = $request->empbday;
+
+        $employee = Employee::where('code_emp', $empCode)->where('birthday_emp',$birthDay)->first();
 
         if ($employee) {
             Auth::login($employee);

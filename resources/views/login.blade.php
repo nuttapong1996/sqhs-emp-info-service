@@ -29,12 +29,20 @@
                             <span class="block sm:inline">{{ session('error') }}</span>
                         </div>
                     @endif
-                    {{-- <label for="empcode" class="block text-sm/6 font-medium text-gray-900">รหัสพนักงาน:</label> --}}
+                    <label for="empcode" class="block text-sm/6 font-medium text-gray-900">รหัสพนักงาน:</label>
                     <div class="mt-1">
                         <input id="empcode" type="text" name="empcode" autocomplete="off" maxlength="20"
                             oninput="this.value = this.value.toUpperCase()" placeholder="กรุณากรอกรหัสพนักงาน"
                             class="block h-10 w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-700 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-500 sm:text-sm/6" />
                     </div>
+
+                    <label for="empbday" class="block text-sm/6 font-medium text-gray-900 mt-3">วันเดือนปีเกิด:</label>
+                    <div class="mt-1">
+                        <input id="empbday" type="date" name="empbday" autocomplete="off" maxlength="20"
+                            oninput="this.value = this.value.toUpperCase()" placeholder="กรุณากรอกรหัสพนักงาน"
+                            class="block h-10 w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-700 focus:outline-2 focus:-outline-offset-2 focus:outline-orange-500 sm:text-sm/6" />
+                    </div>
+
                 </div>
 
                 {{-- <div>
@@ -46,7 +54,7 @@
                         </div>
                     </div>
                     <div class="mt-2">
-                        <input id="password" type="password" name="password" required autocomplete="current-password"
+                        <input id="password" type="password" name="password" required autocomplete="off"
                             class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
                     </div>
                 </div> --}}
