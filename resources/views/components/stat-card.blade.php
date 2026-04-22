@@ -2,11 +2,9 @@
     'title' => 'title',
     'content' => 'content',
     'subcontent' => 'subcontent',
-    'icon' => ' <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" width="200"
-                                height="200" viewBox="0 0 2048 2048">
-                                <path fill="#d6d6d6"
-                                    d="" />
-                            </svg>',
+    'icon' => '',
+    'iconViewbox' =>'',
+    'iconColor' =>'#d6d6d6',
     'foot' => 'foot',
     'colorSub' => 'text-blue-500 bg-blue-100',
     'colorFoot' => 'text-blue-500 bg-blue-100',
@@ -28,8 +26,10 @@
         <div>
             <span>
                 <svg class="w-12 h-12 text-gray-300" xmlns="http://www.w3.org/2000/svg" width="200" height="200"
-                    viewBox="0 0 2048 2048">
-                    {{ $icon }}
+                    viewBox="{{ $iconViewbox }}">
+
+                    <path fill="{{ $iconColor }}"
+                        d="{{ $icon }}" />
                 </svg>
             </span>
         </div>

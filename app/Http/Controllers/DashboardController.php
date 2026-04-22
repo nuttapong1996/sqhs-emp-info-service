@@ -36,9 +36,13 @@ class DashboardController extends Controller
                 (CASE 
                     WHEN MAX(nationality_emp_offlist) = 'ไทย' THEN 10
                     WHEN MAX(nationality_emp_offlist) = 'ลาว' THEN 6
+                END) AS max_business,
+                (CASE 
+                    WHEN MAX(nationality_emp_offlist) = 'ไทย' THEN 10
+                    WHEN MAX(nationality_emp_offlist) = 'ลาว' THEN 6
                     ELSE 0
-                END - SUM(CASE WHEN type_off_offlist LIKE '1%' THEN countday_offlist ELSE 0 END)) AS remain_business,
-                (30 - SUM(CASE WHEN type_off_offlist LIKE '2%' THEN countday_offlist ELSE 0 END)) AS remain_cur_sick ,
+                END - SUM(CASE WHEN type_off_offlist LIKE '1%' AND yearoff_offlist = '$curYear'  THEN countday_offlist ELSE 0 END)) AS remain_business,
+                (30 - SUM(CASE WHEN type_off_offlist LIKE '2%' AND yearoff_offlist = '$curYear' THEN countday_offlist ELSE 0 END)) AS remain_cur_sick ,
                 SUM(CASE WHEN type_off_offlist LIKE '3%' AND yearoff_offlist = '$curYear' AND year_leave_offlist='$prevYear'  THEN countday_offlist ELSE 0 END) AS prev_vecation_usage ,
                 (CASE 
                     WHEN MAX(nationality_emp_offlist) = 'ไทย' THEN 6

@@ -136,7 +136,7 @@
         </header>
         <main>
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                    <div class="flex flex-col lg:flex-row items-center">
+                    <div class="flex flex-col lg:flex-row justify-center items-center">
                         {{ $slot }}
                     </div>
                 </div>
