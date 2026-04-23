@@ -1,0 +1,40 @@
+# Git & Documentation
+.git
+.gitattributes
+.gitignore
+README.md
+
+# Environment & Sensitive data
+.env
+.env.*
+!.env.example
+
+# Dependencies (Installed inside Docker)
+vendor/
+node_modules/
+
+# Testing & Logs
+tests/
+npm-debug.log
+yarn-error.log
+.phpunit.result.cache
+
+# Scripts
+run-dev.bat
+
+# Laravel Storage & Cache (Ignore contents, keep directory)
+storage/logs/*.log
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*.php
+storage/app/public/*
+bootstrap/cache/*
+
+# Public Assets
+public/hot
+public/storage
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
