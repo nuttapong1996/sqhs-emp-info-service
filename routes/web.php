@@ -7,7 +7,8 @@ use App\Http\Controllers\EmployeeDriverlicenseController;
 use App\Http\Controllers\EmployeeHolidayController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [CheckEmployee::class, 'index'])->name('login');
+// เพิ่ม ->middleware('guest') 
+Route::get('/', [CheckEmployee::class, 'index'])->middleware('guest')->name('login');
 
 Route::post('login', [CheckEmployee::class, 'login'])->name('check-emp');
 Route::get('logout', [CheckEmployee::class, 'logout'])->name('logout');

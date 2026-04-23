@@ -14,13 +14,13 @@ class Employee extends Authenticatable
     protected $connection = 'empinfo';
     protected $table = 'tbl_emp';
 
-    protected $primaryKey = 'code_emp';
+    protected $primaryKey = 'code_tbl_emp';
 
     public $timestamps = false;
 
     public $incrementing = false;
 
-    protected $keyType = 'string';
+    // protected $keyType = 'string';
 
     public function getAuthPassword()
     {
