@@ -3,7 +3,7 @@
     "short_name": "EmpInfo",
     "background_color": "#162556",
     "display": "fullscreen",
-    "description": "แอพพลิเคชั่นสำหรับพนักงาน เพื่อการเข้าถึงข้อมูลและบริการต่างๆ ของบริษัทได้อย่างรวดเร็วและสะดวกสบาย",
+    "description": "Employee self service information",
     "theme_color": "#162556",
     "start_url": "/",
     "icons": [

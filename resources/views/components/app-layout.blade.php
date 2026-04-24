@@ -24,7 +24,7 @@
                     {{-- Dekstop Menu --}}
                     <div class="flex items-center">
                         <div class="shrink-0">
-                            <img src="{{ asset('imgs/logo1.svg') }}"alt="Your Company" class="size-8" />
+                            <img src="{{ asset('imgs/logo-outline.svg') }}"alt="Your Company" class="size-8" />
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
