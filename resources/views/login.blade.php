@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @googlefonts
-<<<<<<< HEAD
-    @livewireScripts()
-=======
     @livewireScripts
->>>>>>> 4f990f4a9b0bd7b17fc19cb7a1f9f4c1bdae1399
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{ config('app.name') }}</title>
 </head>
