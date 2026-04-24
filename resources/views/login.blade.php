@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @PwaHead
     @googlefonts
-    @livewireScripts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{ config('app.name') }}</title>
 </head>
@@ -14,7 +14,7 @@
 <body class="bg-blue-50 h-full">
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img src="{{ asset('imgs/logo1.svg') }}" alt="Logo Company" class="mx-auto h-25 w-auto" />
+            <img src="{{ asset('imgs/logo.svg') }}" alt="Logo Company" class="mx-auto h-25 w-auto" />
             <h2 class="text-center text-3xl/loose font-bold tracking-tight text-gray-900 mt-5">Employee Info Service
             </h2>
             <h4 class="text-center text-2xl/loose">ระบบบริการข้อมูลพนักงาน</h4>
@@ -64,6 +64,8 @@
             </p>
         </div>
     </div>
+    @livewireScripts
+    @RegisterServiceWorkerScript
 </body>
 
 </html>
