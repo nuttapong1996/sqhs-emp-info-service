@@ -62,14 +62,14 @@ final class HolidayTable extends PowerGridComponent
     {
         return PowerGrid::fields()
             ->add('no_emp_offlist')
-            ->add('startday_offlist' , function($holiday){
+            ->add('startday_offlist', function ($holiday) {
                 return Carbon::parse($holiday->startday_offlist)->format('d-m-Y');
             })
-            ->add('endday_offlist' , function($holiday){
+            ->add('endday_offlist', function ($holiday) {
                 return Carbon::parse($holiday->endday_offlist)->format('d-m-Y');
             })
-            ->add('type_off_offlist' ,function($holiday){
-                return e(trim(str_replace(['1.','2.','3.','4.','5.','6.','7.'], '', $holiday->type_off_offlist)));
+            ->add('type_off_offlist', function ($holiday) {
+                return e(trim(str_replace(['1.', '2.', '3.', '4.', '5.', '6.', '7.'], '', $holiday->type_off_offlist)));
             })
             ->add('countday_offlist')
             ->add('comment_offlist');
@@ -82,7 +82,7 @@ final class HolidayTable extends PowerGridComponent
             Column::add()->title('ถึงวันที่')->field('endday_offlist'),
             Column::add()->title('เลขที่ใบลา')->field('no_emp_offlist'),
             Column::add()->title('ประเภท')->field('type_off_offlist'),
-            Column::add()->title('จำนวน')->field('countday_offlist')->headerAttribute('class' , 'text-center')->bodyAttribute('class' , 'text-center'),
+            Column::add()->title('จำนวน')->field('countday_offlist')->headerAttribute('class', 'text-center')->bodyAttribute('class', 'text-center'),
             Column::add()->title('หมายเหตุ')->field('comment_offlist'),
         ];
     }
