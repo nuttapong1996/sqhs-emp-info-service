@@ -14,8 +14,8 @@
 <body class="bg-blue-50 h-full">
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img src="{{ asset('imgs/logo.svg') }}" alt="Logo Company" class="mx-auto h-25 w-auto" />
-            <h2 class="text-center text-3xl/loose font-bold tracking-tight text-gray-900 mt-5">Employee Info Service
+            <img src="{{ asset('imgs/logo.svg') }}"  class="mx-auto h-30 w-auto" />
+            <h2 class="text-center text-3xl/loose font-bold tracking-tight text-gray-900 mt-1">Employee Info Service
             </h2>
             <h4 class="text-center text-2xl/loose">ระบบบริการข้อมูลพนักงาน</h4>
             <h6 class="text-center text-sm/loose">SAHAKOL EQUIPMENT PCL. (Hongsa)</h6>

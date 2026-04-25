@@ -24,7 +24,9 @@
                     {{-- Dekstop Menu --}}
                     <div class="flex items-center">
                         <div class="shrink-0">
-                            <img src="{{ asset('imgs/logo-outline.svg') }}"alt="Your Company" class="size-8" />
+                            <a href="{{ route('home') }}">
+                                <img src="{{ asset('imgs/logo-outline.svg') }}" alt="Your Company" class="size-8" />
+                            </a>
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
@@ -137,12 +139,12 @@
         </header>
         <main>
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                    <div class="flex flex-col lg:flex-row justify-center items-center">
-                        {{ $slot }}
-                    </div>
+                <div class="flex flex-col lg:flex-row justify-center items-center">
+                    {{ $slot }}
                 </div>
             </div>
-        </main>
+    </div>
+    </main>
     </div>
     @livewireScripts
     @RegisterServiceWorkerScript
